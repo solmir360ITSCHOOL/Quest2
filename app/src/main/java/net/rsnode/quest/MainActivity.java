@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player = new Character("Игрок");
         story = new Story(this);
         console.setText("============" + story.current_situation.subject + "============\n" + story.current_situation.text);
+        console.setText("=====\nЗдоровье:" + player.Health + "\tМощность:"
+                + player.Power + "\tДеньги:" + player.Money + "\n=====");
     }
 
     @Override
@@ -48,5 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         story.go(choice);
         console.setText("============" + story.current_situation.subject + "============\n" + story.current_situation.text);
+        console.setText("=====\nЗдоровье:" + player.Health + "\tМощность:"
+                + player.Power + "\tДеньги:" + player.Money + "\n=====");
     }
 }
