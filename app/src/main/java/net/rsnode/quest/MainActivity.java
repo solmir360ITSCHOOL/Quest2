@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         console = findViewById(R.id.Console);
         player = new Character("Игрок");
         story = new Story(this);
-        console.setText("============" + story.current_situation.subject + "============\n" + story.current_situation.text);
         console.setText("=====\nЗдоровье:" + player.Health + "\tМощность:"
-                + player.Power + "\tДеньги:" + player.Money + "\n=====");
+                + player.Power + "\tДеньги:" + player.Money + "\n=====\n"
+                + "============" + story.current_situation.subject + "============\n" + story.current_situation.text);
     }
 
     @Override
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         story.go(choice);
-        console.setText("============" + story.current_situation.subject + "============\n" + story.current_situation.text);
         console.setText("=====\nЗдоровье:" + player.Health + "\tМощность:"
-                + player.Power + "\tДеньги:" + player.Money + "\n=====");
+                + player.Power + "\tДеньги:" + player.Money + "\n=====\n"
+                + "============" + story.current_situation.subject + "============\n" + story.current_situation.text);
     }
 }

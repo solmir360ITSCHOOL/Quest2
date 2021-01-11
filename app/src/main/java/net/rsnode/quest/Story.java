@@ -34,8 +34,9 @@ public class Story {
                 "конец",
                 "",
                 0, 0, 0, 0);
+
         start_story.direction[0].direction[0] = new Situation(
-                "опасность",
+                "ничего не обычного",
                 "Вы снова видете 3 двери\n"
                         + "(1)пойти в первую дверь\n"
                         + "(2)пойти во вторую дверь\n"
@@ -55,6 +56,7 @@ public class Story {
                         + "(2)пойти во вторую дверь\n"
                         + "(3)пойти в третью дверь ",
                 0, 0, 0, 0);
+
         start_story.direction[1].direction[0] = new Situation(
                 "ничего не обычного",
                 "Вы снова видете 3 двери\n"
@@ -76,6 +78,7 @@ public class Story {
                         + "(2)пойти во вторую дверь\n"
                         + "(3)пойти в третью дверь ",
                 0, 0, 0, 0);
+
         current_situation = start_story;
     }
 
